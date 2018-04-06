@@ -1,0 +1,100 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body bgcolor="pink">
+   <center><h1>Registration Form</h1></center> 
+    <div id="validation">
+        <form method="post" action="success.html" onsubmit="return Validate()" name="vform">
+            <div>
+                <input type="text" name="firstname" id="fname" class="textInput" placeholder="FirstName">
+                <div id="First_error" ></div>
+            </div>
+             <div>
+                <input type="text" name="laststname" id="lname" class="textInput" placeholder="LastName">
+                <div id="Last_error" ></div>
+            </div>
+             <div>
+                <input type="text" name="mobilenumber" id="mobno" class="textInput" placeholder="Mobile Number">
+                <div id="mob_error"></div>
+            </div>
+             <div>
+                <input type="text" name="email" id="e"class="textInput" placeholder="Email">
+                <div id="email_error" ></div>
+            </div>
+             <div>
+                <input type="password" name="password" id="pass" class="textInput" placeholder="Password">
+                <div id="password_error" ></div>
+            </div>
+            <div>
+                <label>Birth Day</label>
+                <input type="date">
+            </div>
+            <div>
+                <input type="radio" name="sex" value="male" checked="checked">Male
+                 <input type="radio" name="sex" value="feMale">Female
+            </div>
+             <div>
+                <input type="submit" value="Submit" class="btn" name="Submit">
+                
+            </div>
+        </form>
+        
+    </div>
+    <script type="text/javascript">
+           function Validate() {
+                //checking first name
+                 var fn = document.getElementById('fname').value;
+                 var str = /(^[A-Z]{1,1})+([a-z]{1,15})$/;
+                 if (fn == '') {
+                     First_error.innerHTML = 'First Name should not be empty';
+                     return false;
+                 }
+                 else
+                    First_error.innerHTML = '';
+               
+                var ln = document.getElementById('lname').value;
+                 var str = /(^[A-Z]{1,1})+([a-z]{1,15})$/;
+                 if (ln == '') {
+                     Last_error.innerHTML = 'Last Name should not be empty';
+                     return false;
+                 }
+                 else
+                    Last_error.innerHTML = '';
+               
+               var mobn = document.getElementById('mobno').value;
+                 var str = /(^[A-Z]{1,1})+([a-z]{1,15})$/;
+                 if (mobn == '') {
+                     mob_error.innerHTML = 'Mobile number must be 10 digit';
+                     return false;
+                 }
+                 else
+                    mob_error.innerHTML = '';
+               
+               var email = document.getElementById('e').value;
+                 var str = /w+@(^[A-Z]{1,1})+([a-z]{1,15})$/;
+                 if (email == '') {
+                     email_error.innerHTML = 'email must be entered';
+                     return false;
+                 }
+                 else if(email!=="@"){
+                    email_error.innerHTML = 'email should contain @';
+                 }
+               else 
+                   email_error.innerHTML='';
+               
+
+                 var pa = document.getElementById('pass').value;
+                 var str = /(^[A-Z]{1,1})+([a-z]{1,15})$/;
+                 if (pa == '') {
+                     password_error.innerHTML = 'password must be 8 digit';
+                     return false;
+                 }
+                    else if(pa!=="A-Z"){
+                     password_error.innerHTML = 'password must contain at least 1 capiatal letter';}
+               else password_error.innerHTML='';
+                } 
+    
+</script>
+    </body>
+</html>

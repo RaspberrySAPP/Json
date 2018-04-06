@@ -1,0 +1,158 @@
+<html >
+<head>
+<script typ="text/javascript" src="validation.js" >
+</script>
+</head>
+<body>
+<center>
+<h1>Demo Registration Form</h1>
+<form name="form1"  method="post" action="success.html">
+<table border='0'>
+ <tr>
+  <td><LABEL for="firstname">First Name:<sup style="color:#F00">*</sup> </LABEL></td>                   
+         <td><INPUT type="text" id="firstname"></td>
+    </tr>
+ <tr>
+     <td><LABEL for="lastname">Last Name:<sup style="color:#F00">*</sup> </LABEL></td>
+  <td><INPUT type="text" id="lastname"></td>
+    </tr>  
+
+ <tr>
+
+   <td><LABEL for="gender">Gender:<sup style="color:#F00">*</sup> </LABEL></td> <td><INPUT type="radio" name="gender" value="Male"> Male
+
+   <INPUT type="radio" name="gender" value="Female"> Female </td>
+
+ </tr>
+
+ <tr>
+
+  <td><LABEL for="dob">Date of Birth:<sup style="color:#F00">*</sup> </LABEL></td>
+
+  <td>
+
+  <select id="dd">
+
+        <option value="dd">DD</option>
+
+        <script type="text/javascript">
+
+   for(var i=1;i<32;i++)
+    document.write("<option value='"+i+"'>" + i+"</option> ");
+
+   </script>
+        </select>
+
+                </select>
+40
+                 <select id="mmm">
+41
+         <option value="mmm">MMM</option>
+42
+         <option value="0">JAN</option>
+43
+         <option value="1">FEB</option>
+44
+         <option value="2">MAR </option>
+45
+         <option value="3">APR</option>
+46
+         <option value="4">MAY</option>
+47
+         <option value="5">JUN</option>
+48
+         <option value="6">JUL</option>
+49
+         <option value="7">AUG</option>
+50
+         <option value="8">SEP</option>
+51
+         <option value="9">OCT</option>
+52
+         <option value="10">NOV</option>
+53
+         <option value="11">DEC</option>
+54
+        </select>
+55
+        <select id="yyyy">
+56
+           <option value="yyyy"selected>YYYY</option>
+57
+        <script type="text/javascript">
+58
+   var dt= new Date();
+59
+   for(var i=1979;i<=dt.getFullYear();i++)
+60
+    document.write("<option value='"+i+"'>" + i+"</option> ");
+61
+  </script>
+62
+  </select>
+63
+    
+64
+  </td>
+65
+ </tr>
+66
+ <tr>
+67
+  <td><LABEL for="address" style="text-align:left;">Address:<sup style="color:#F00">*</sup> </LABEL></td>
+68
+  <td><textarea id="address"  name="address" rows="4" cols="20"></textarea>  
+69
+  </td>
+70
+   
+71
+ 
+72
+ </tr>
+73
+ <tr>
+74
+  <td><LABEL for="contctno">Contact Number:<sup style="color:#F00">*</sup> </LABEL></td>
+75
+  <td><INPUT type="text" id="contctno"></td>
+76
+ </tr>
+77
+ <tr>
+78
+  <td><LABEL for="email">Email:<sup style="color:red;">*</sup> </LABEL></td>
+79
+  <td><INPUT type="text" id="email"></td>
+80
+ </tr>
+81
+ <tr>
+82
+  <td></td><td><br/><INPUT type="submit" onClick="return validateForm()" value="Submit">
+83
+  <INPUT type="reset" onClick="return confirmreset()"></td>
+84
+ </tr>
+85
+  
+86
+ <tr>
+87
+  <td></td><td style="font-size:12px;text-align:right;"><br/><i style="color:red;font-size:12px;align:right;" >* - Mandatory</i></td>
+88
+ </tr>
+89
+    </table>
+90
+ </FORM></center>
+91
+ 
+92
+ 
+93
+ 
+94
+</body>
+95
+</html>

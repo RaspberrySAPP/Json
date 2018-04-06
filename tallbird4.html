@@ -1,0 +1,61 @@
+<html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery.js"></script>
+</head>
+<body bgcolor="pink">
+   <center><h1>Registration Form</h1></center> 
+    <div >
+        <form id="f1" >
+            <div>
+                <input type="text" name="firstname" id="fname" class="textInput" placeholder="FirstName">
+                
+            </div>
+             <div>
+                <input type="text" name="laststname" id="lname" class="textInput" placeholder="LastName">
+                
+            </div>
+             <div>
+                <input type="text" name="mobilenumber" id="mobno" class="textInput" placeholder="Mobile Number">
+                
+            </div>
+             <div>
+                <input type="text" name="email" id="e"class="textInput" placeholder="Email">
+               
+            </div>
+             <div>
+                <input type="password" name="password" id="pass" class="textInput" placeholder="Password">
+                
+            </div>
+            <div>
+                <label>Birth Day</label>
+                <input type="date">
+            </div>
+            <div>Gender:
+                <input type="radio" name="sex" value="male" checked="checked">Male
+                 <input type="radio" name="sex" value="feMale">Female
+            </div>
+             <div>
+                <input type="submit" value="Submit" class="btn" name="Submit">
+                
+            </div>
+        </form>
+        
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#f1').submit(function(e){
+                
+               console.log('JSON object created'); 
+                console.log($(this))
+                console.log($(this).serialize())
+               
+                e.preventDefault();
+            });
+        });
+    </script>
+        
+    </body>
+<html>

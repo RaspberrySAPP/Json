@@ -1,0 +1,68 @@
+<html>
+    <head>
+   
+   
+       <script src="jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="bootstrap.min.js"></script>
+       
+         </head>
+     <body>
+         <button></button>
+          
+         <div class="container">
+             <div class="table-responsive">
+                 <table class="table-bordered table-striped" id="user_table">
+                     <tr >
+                         <th align="center">ID</th>
+                         <th align="center">Name</th>
+                         <th>Username</th>
+                         <th>Email</th>
+                         <th colspan="4">Address</th>
+                                           
+                         <th colspan="2">Geo                   
+                                                       
+                         </th>
+                         <th>Phone</th>
+                         <th>Website</th>
+                         <th colspan="3">Company </th>
+                                          
+                                                     
+                     </tr>
+                     <tr>
+                         <th></th> <th></th> <th></th> <th></th> <th>Street</th> <th>Suite</th> <th>city</th> <th>Zipcode</th>
+                         <th>lat</th><th>lng</th><th></th><th></th><th>Name</th><th>catchphrase</th><th>bs</th>
+                      
+                     </tr>
+                 </table>
+             </div>
+         </div>
+    </body>
+</html>
+<script>
+    $(document).ready(function(){
+       $.getJSON("https://jsonplaceholder.typicode.com/users",function(data){
+         var user_data='';
+           $.each(data,function(key,value){
+              user_data += '<tr>';
+               user_data +='<td>' +value.id+'</td>';
+               user_data +='<td>' +value.name+'</td>';
+               user_data +='<td>' +value.username+'</td>';
+               user_data +='<td>' +value.email+'</td>';
+               user_data +='<td>' +value.address.street+'</td>';
+               user_data +='<td>' +value.address.suite+'</td>';
+               user_data +='<td>' +value.address.city+'</td>';
+               user_data +='<td>' +value.address.zipcode+'</td>';
+               user_data +='<td>' +value.address.geo.lat+'</td>';
+               user_data +='<td>' +value.address.geo.lng+'</td>';
+               user_data +='<td>' +value.phone+'</td>';
+               user_data +='<td>' +value.website+'</td>';
+               user_data +='<td>' +value.company.name+'</td>';
+               user_data +='<td>' +value.company.catchPhrase+'</td>';
+               user_data +='<td>' +value.company.bs+'</td>';
+                user_data += '</tr>';
+           });
+           $('#user_table').append(user_data);
+       });
+    });
+</script>
